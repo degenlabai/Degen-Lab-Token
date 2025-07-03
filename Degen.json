@@ -1,7 +1,7 @@
 {
     "name": "Degen Lab",
     "symbol": "DGNLB",
-    "description": "Aura sol token contract",
+    "description": "DGNLB sol token contract",
     "image": "https://raw.githubusercontent.com/degenlabai/Degen-Lab-Token/main/DGNLB.png",
     "properties": {
       "files": [
