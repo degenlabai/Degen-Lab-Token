@@ -33,7 +33,7 @@ const privateKey = ["private key"];
 
 const payer = Keypair.fromSecretKey(Buffer.from(privateKey));
 
-const connection = new Connection("https://api.devnet.solana.com", "confirmed");
+const connection = new Connection("https://api.mainnet-beta.solana.com", "confirmed");
 
 let transaction;
 let transactionSignature;
@@ -51,7 +51,7 @@ const metaData = {
     name: "Degen Lab",
     symbol: "DGNLB",
     uri: "https://raw.githubusercontent.com/degenlabai/Degen-Lab-Token/refs/heads/main/Degen.json",
-    additionalMetadata: [["description", "Only Possible On Solana"]],
+    additionalMetadata: [["description", "DGNLB sol token contract"]],
 };
 
 const metadataExtension = 4; 
@@ -132,7 +132,7 @@ transactionSignature = await sendAndConfirmTransaction(
 
 console.log(
     "\nCreate Mint Account:",
-    `https://solana.fm/tx/${transactionSignature}?cluster=devnet-alpha`
+    `https://solana.fm/tx/${transactionSignature}?cluster=mainnet-alpha`
 );
 await new Promise(resolve => setTimeout(resolve, 20000)); // 10-second delay
 
@@ -173,12 +173,12 @@ console.log("10 seconds have passed, continuing execution...");
 
 console.log(
     "\nRemove Additional Metadata Field:",
-    `https://solana.fm/tx/${transactionSignature}?cluster=devnet-alpha`
+    `https://solana.fm/tx/${transactionSignature}?cluster=mainnet-alpha`
 );
 
 console.log(
     "\nMint Account:",
-    `https://solana.fm/address/${mint}?cluster=devnet-alpha`
+    `https://solana.fm/address/${mint}?cluster=mainnet-alpha`
 );
 
 const sourceTokenAccount = await createAccount(
@@ -205,7 +205,7 @@ transactionSignature = await mintTo(
 
 console.log(
     "\nMint Tokens:",
-    `https://solana.fm/tx/${transactionSignature}?cluster=devnet-alpha`
+    `https://solana.fm/tx/${transactionSignature}?cluster=mainnet-alpha`
 );
 
 await new Promise(resolve => setTimeout(resolve, 20000)); // 10-second delay
@@ -214,7 +214,7 @@ console.log("10 seconds have passed, continuing execution...");
 
 console.log(
     "\nMint Account:",
-    `https://solana.fm/address/${mint}?cluster=devnet-alpha`
+    `https://solana.fm/address/${mint}?cluster=mainnet-alpha`
 );
 
   async function revokeMintAuthority(connection, mint,  payer) {
