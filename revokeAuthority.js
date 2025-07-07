@@ -11,11 +11,11 @@ import {
     tokenMetadataUpdateAuthority
   } from "@solana/spl-token";
   
-  const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
+  const connection = new Connection(clusterApiUrl("mainnet-beta"), "confirmed");
   const privateKey = ["private key"];
   const payer = Keypair.fromSecretKey(Buffer.from(privateKey));
   const updateAuthorityKeypair = payer;  
-  const mintPubkey = new PublicKey("593AXaxXiKsw25xZTU1orTiiRYPgijdDX4qeYGXfzrY8");  
+  const mintPubkey = new PublicKey("AH926ohacWbTzFm7YU3vqV55L2iaTUuFVBup3bKH63ED");  
   
   const newUpdateAuthority = null;
   
